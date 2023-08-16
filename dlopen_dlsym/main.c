@@ -11,6 +11,7 @@ int main() {
     return -1;
     }
 
+
     void (*functionPointer)() = dlsym(handle,"print_hello");
 
     if(!functionPointer){
@@ -18,6 +19,7 @@ int main() {
         printf("Error description %s\n",dlerror());
         return -1;
     }
+
 
     functionPointer();
 
